@@ -1,4 +1,3 @@
-<    
 <?php
 header("Content-Type: application/json; charset=UTF-8");
 
@@ -74,7 +73,6 @@ if ($httpCode < 200 || $httpCode >= 300) {
     ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
     exit;
 }
-
 // Load HTML
 libxml_use_internal_errors(true);
 
