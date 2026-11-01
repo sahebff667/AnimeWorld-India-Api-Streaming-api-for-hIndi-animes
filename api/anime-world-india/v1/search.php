@@ -25,6 +25,11 @@ curl_setopt_array($ch, [
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_USERAGENT => "Mozilla/5.0",
     CURLOPT_TIMEOUT => 20,
+CURLOPT_HTTPHEADER => [
+    "Accept: text/html,application/xhtml+xml",
+    "Accept-Language: en-US,en;q=0.9"
+],
+CURLOPT_ENCODING => "",
 ]);
 
 $html = curl_exec($ch);
