@@ -73,6 +73,14 @@ if ($httpCode < 200 || $httpCode >= 300) {
     ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
     exit;
 }
+echo json_encode([
+    "http_code" => $httpCode,
+    "content_type" => $contentType,
+    "final_url" => $finalUrl,
+    "html_preview" => substr($html, 0, 3000)
+], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+
+exit;
 // Load HTML
 libxml_use_internal_errors(true);
 
