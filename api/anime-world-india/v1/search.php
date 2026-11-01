@@ -15,7 +15,7 @@ if ($query === '') {
 
 // Build URL
 $targetUrl = "https://animeworld-india.me/search?q=" . urlencode($query) . "&page=" . $page;
-$proxyUrl  = "https://corsproxy.io/?" . urlencode($targetUrl);
+$proxyUrl  = $targetUrl;);
 
 // Fetch HTML
 $ch = curl_init();
